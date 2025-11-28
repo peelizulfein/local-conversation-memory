@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Conversation Memory Schema",
+  "description": "Source of truth for all Q CLI conversations with semantic metadata",
+  "type": "object",
+  "properties": {
+    "conversations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "date", "messages", "metadata"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique conversation ID (ISO date + hash)"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Conversation start time"
+          },
+          "title": {
+            "type": "string",
+            "description": "Human-readable conversation title"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["role", "content", "timestamp"],
+              "properties": {
+                "role": {
+                  "type": "string",
+                  "enum": ["user", "assistant"]
+                },
+                "content": {
+                  "type": "string"
+                },
+                "timestamp": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "metadata": {
+            "type": "object",
+            "properties": {
+              "project": {
+                "type": "string",
+                "description": "Primary project (e.g., moneypenny, visual-annotation)"
+              },
+              "topics": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "Main topics discussed"
+              },
+              "decisions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "decision": {"type": "string"},
+                    "rationale": {"type": "string"},
+                    "timestamp": {"type": "string"}
+                  }
+                },
+                "description": "Key decisions made"
+              },
+              "related_conversations": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "IDs of related conversations"
+              },
+              "tags": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "Freeform tags"
+              },
+              "artifacts": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "type": {"type": "string", "enum": ["code", "document", "data", "config"]},
+                    "path": {"type": "string"},
+                    "description": {"type": "string"}
+                  }
+                },
+                "description": "Files created/modified"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

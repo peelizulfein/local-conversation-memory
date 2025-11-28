@@ -1,0 +1,15 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Data (user-specific)
+conversations/
+embeddings/
+*.sqlite3
+
+# macOS
+.DS_Store
+
+# Temp files
+*.tmp
