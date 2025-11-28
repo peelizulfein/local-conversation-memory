@@ -14,8 +14,8 @@ Your chat history is scattered across Claude, ChatGPT, Q CLI, and other tools. E
 ## Quick Start
 
 ```bash
-git clone https://github.com/youruser/conversation-memory.git
-cd conversation-memory
+git clone https://github.com/peelizulfein/local-conversation-memory.git
+cd local-conversation-memory
 
 python3 -m venv venv
 source venv/bin/activate
