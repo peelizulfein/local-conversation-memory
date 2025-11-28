@@ -1,14 +1,14 @@
 # Conversation Memory
 
-> Local semantic search over your AI chat history. Give your LLM agents memory across sessions.
+> Cross-reference your AI conversations and recall topics across tools—without giving up your privacy.
 
-Ever had a great conversation with Claude, ChatGPT, or Q CLI and wished you could recall it later? This tool indexes your chat history locally and lets you (or your AI agents) search it semantically.
+Your chat history is scattered across Claude, ChatGPT, Q CLI, and other tools. Each conversation lives in its own silo. This tool unifies them locally, letting you search semantically across everything and discover connections between conversations—all without sending your data anywhere.
 
 **Key features:**
-- 🔍 Semantic search across all your conversations
-- 🔗 Cross-conversation linking via embedding similarity
-- 📦 Portable JSON format - bring your own chat exports
-- 🏠 100% local - no API calls, no cloud, your data stays yours
+- 🔗 Cross-reference conversations across any tool
+- 🔍 Semantic topic recall—find related discussions you forgot about
+- 🏠 100% local—your context stays private, no cloud, no API calls
+- 📦 Portable JSON format—bring your own chat exports
 - 🤖 Agent-friendly output for context injection
 
 ## Quick Start
